@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+}
+
+:root {
+  --primary01: hsl(215, 51%, 70%);
+  --primary02: hsl(178, 100%, 50%);
+  --neutral01: hsl(217, 54%, 11%);
+  --neutral02: hsl(216, 50%, 16%);
+  --neutral03: hsl(215, 32%, 27%);
+  --neutral04: hsl(0, 0%, 100%);
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+.wrap {
+  padding-top: 80px;
+  min-height: 100vh;
+  background: var(--neutral01);
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 24px;
+  background: var(--neutral02);
+  border-radius: 14px;
+}
+.card .cardImg {
+  margin-bottom: 24px;
+}
+.card .cardImg a {
+  display: block;
+  position: relative;
+}
+.card .cardImg a:hover::after,
+.card .cardImg a:hover::before {
+  display: block;
+}
+.card .cardImg a::before {
+  display: none;
+  content: url('/images/icon-view.svg');
+  position: absolute;
+  top: 50%; 
+  right: 50%;
+  transform: translate(50%,-50%);
+}
+.card .cardImg a::after {
+  display: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 237, 237, 0.5);;
+  border-radius: 7px;
+}
+.card .cardImg img {
+  display: block;
+  border-radius: 7px;
+}
+.card .textBlk {
+  margin-bottom: 14px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--neutral03);
+}
+.card .title {
+  margin-bottom: 19px;
+}
+.card .title a {
+  color: var(--neutral04);
+  font-size: 22px;
+}
+.card .title a:hover,
+.card .creator .txt a:hover {
+  color: var(--primary02);
+}
+.card .desc {
+  margin-bottom: 23px;
+  color: var(--primary01);
+  line-height: 1.5;
+}
+.card .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .price .main {
+  padding-left: 18px;
+  background: url('/images/icon-ethereum.svg') no-repeat left top;
+  color: var(--primary02);
+  font-weight: 600;
+}
+.card .price .daysLeft {
+  padding-left: 17px;
+  background: url('/images/icon-clock.svg') no-repeat left top;
+  color: var(--primary01);
+  font-weight: 300;
+}
+.card .creator {
+  display: flex;
+  align-items: center;
+}
+.card .creator .img {
+  width: 34px;
+  margin-right: 18px;
+}
+.card .creator .img img {
+  border: 2px solid var(--neutral04);
+  border-radius: 50%;
+}
+.card .creator .txt {
+  color: var(--primary01);
+  font-weight: 300;
+  font-size: 16px;
+}
+.card .creator .txt a {
+  color: var(--neutral04);
+}
